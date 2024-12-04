@@ -30,7 +30,7 @@ def get_business_plan(main_industry, sub_industry):
             "Challenges": filtered_data['Challenges'].values[0],
             "Target Audience": filtered_data['Target Audience'].values[0],
             "Revenue Streams": filtered_data['Revenue Streams'].values[0],
-            "Profit Range":
+            "Profit Range": filtered_data["Profit Range"].values[0],
         }
     return None
 
@@ -98,6 +98,7 @@ def main():
                 st.write(f"**Challenges**: {business_plan['Challenges']}")
                 st.write(f"**Target Audience**: {business_plan['Target Audience']}")
                 st.write(f"**Revenue Streams**: {business_plan['Revenue Streams']}")
+                st.write(f"**Profit Range**: {business_plan['Profit Range']}")
             else:
                 # Fallback Plan
                 st.info("Generating Business Plan...")
