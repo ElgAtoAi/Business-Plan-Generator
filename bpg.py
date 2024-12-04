@@ -6,7 +6,7 @@ from langchain.chains import LLMChain
 from langchain_core.prompts import ChatPromptTemplate
 
 #Load the CSV file
-data = pd.read_csv("C:\\Users\\Monasri M\\Downloads\\expanded_business_plans_final re.csv")
+data = pd.read_csv("D:\\Business plan generator\\business plans dataset.csv")
 
 # Streamlit app header
 st.set_page_config(
