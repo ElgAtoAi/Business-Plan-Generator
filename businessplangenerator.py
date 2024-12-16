@@ -12,7 +12,7 @@ else:
     client = Groq(api_key=api)
 
 # Load the CSV file
-data = pd.read_csv("C:\\Users\\Monasri M\\Downloads\\business plans dataset(1).csv")
+data = pd.read_csv("business plans dataset(1).csv")
 
 # Streamlit app header
 st.set_page_config(
