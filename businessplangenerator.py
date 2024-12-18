@@ -2,7 +2,7 @@
 import pandas as pd
 import streamlit as st
 from groq import Groq
-import os
+
 
 
 # Streamlit app header
@@ -13,11 +13,9 @@ st.set_page_config(
 )
 
 # Set up Groq API Key
-api = os.getenv("GROQ_API_KEY")
-if not api:
-    st.error("API key not found. Please set the 'GROQ_API_KEY' environment variable.")
-else:
-    client = Groq(api_key=api)
+api = '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'
+client = Groq(api_key=api)
+
 
 # Load the CSV file
 data = pd.read_csv("business plans dataset(1).csv")
