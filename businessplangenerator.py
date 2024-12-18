@@ -4,6 +4,14 @@ import streamlit as st
 from groq import Groq
 import os
 
+
+# Streamlit app header
+st.set_page_config(
+    page_title="Business Plan Generator",
+    page_icon="📊",
+    layout="centered"  # Enhanced UI with wide layout
+)
+
 # Set up Groq API Key
 api = os.getenv("GROQ_API_KEY")
 if not api:
@@ -13,13 +21,6 @@ else:
 
 # Load the CSV file
 data = pd.read_csv("business plans dataset(1).csv")
-
-# Streamlit app header
-st.set_page_config(
-    page_title="Business Plan Generator",
-    page_icon="📊",
-    layout="centered"  # Enhanced UI with wide layout
-)
 
 # Define a function to get sub-industries based on the main industry
 def get_sub_industries(main_industry):
